@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264F319A252F8B1900849B41 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F3199252F8B1900849B41 /* BaseRequest.swift */; };
+		264F319E252F8B2D00849B41 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F319D252F8B2D00849B41 /* BaseResponse.swift */; };
 		269CF03F2528EFD70079BB8F /* SwiftUIMovieBaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CF03E2528EFD70079BB8F /* SwiftUIMovieBaseApp.swift */; };
 		269CF0412528EFD70079BB8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CF0402528EFD70079BB8F /* ContentView.swift */; };
 		269CF0432528EFD70079BB8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269CF0422528EFD70079BB8F /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		264F3199252F8B1900849B41 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		264F319D252F8B2D00849B41 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		269CF03B2528EFD70079BB8F /* SwiftUIMovieBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMovieBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		269CF03E2528EFD70079BB8F /* SwiftUIMovieBaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMovieBaseApp.swift; sourceTree = "<group>"; };
 		269CF0402528EFD70079BB8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				26EB8B6D252CEFF6007E3BCE /* BaseNetwork.swift */,
+				264F3199252F8B1900849B41 /* BaseRequest.swift */,
+				264F319D252F8B2D00849B41 /* BaseResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -180,8 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264F319A252F8B1900849B41 /* BaseRequest.swift in Sources */,
 				26EB8B6E252CEFF6007E3BCE /* BaseNetwork.swift in Sources */,
 				269CF0412528EFD70079BB8F /* ContentView.swift in Sources */,
+				264F319E252F8B2D00849B41 /* BaseResponse.swift in Sources */,
 				269CF03F2528EFD70079BB8F /* SwiftUIMovieBaseApp.swift in Sources */,
 				26EB8B73252CF6A7007E3BCE /* PlistReader.swift in Sources */,
 			);
