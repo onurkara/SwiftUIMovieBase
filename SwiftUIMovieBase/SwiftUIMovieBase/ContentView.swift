@@ -7,8 +7,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        return TabView {
+            Text("Top rated movies").tabItem {
+                Image(systemName: "list.star")
+                Text("Top Rated")
+            }
+
+            Text("Popular movies").tabItem {
+                Image(systemName: "list.and.film")
+                Text("Popular")
+            }
+        }
     }
 }
 
