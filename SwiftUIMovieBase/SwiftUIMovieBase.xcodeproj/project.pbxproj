@@ -10,6 +10,7 @@
 		264F319A252F8B1900849B41 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F3199252F8B1900849B41 /* BaseRequest.swift */; };
 		264F319E252F8B2D00849B41 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F319D252F8B2D00849B41 /* BaseResponse.swift */; };
 		264F31A5252F8C5C00849B41 /* TopRatedMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264F31A4252F8C5C00849B41 /* TopRatedMovieRequest.swift */; };
+		265DD0DA25377C1700D37E86 /* TopRatedMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DD0D925377C1700D37E86 /* TopRatedMoviesViewModel.swift */; };
 		265DD0E025377E0700D37E86 /* TopRatedMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DD0DF25377E0700D37E86 /* TopRatedMovieResponse.swift */; };
 		266D1B8F2530FF790080CFBE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D1B8E2530FF790080CFBE /* Movie.swift */; };
 		269CF03F2528EFD70079BB8F /* SwiftUIMovieBaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CF03E2528EFD70079BB8F /* SwiftUIMovieBaseApp.swift */; };
@@ -26,6 +27,7 @@
 		264F3199252F8B1900849B41 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		264F319D252F8B2D00849B41 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		264F31A4252F8C5C00849B41 /* TopRatedMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMovieRequest.swift; sourceTree = "<group>"; };
+		265DD0D925377C1700D37E86 /* TopRatedMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesViewModel.swift; sourceTree = "<group>"; };
 		265DD0DF25377E0700D37E86 /* TopRatedMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMovieResponse.swift; sourceTree = "<group>"; };
 		266D1B8E2530FF790080CFBE /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		269CF03B2528EFD70079BB8F /* SwiftUIMovieBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMovieBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		265DD0D725377BE800D37E86 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				265DD0D925377C1700D37E86 /* TopRatedMoviesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		265DD0D825377C0500D37E86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				269CF0402528EFD70079BB8F /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		265DD0DD25377D7000D37E86 /* RequestResponse */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,12 +106,14 @@
 			isa = PBXGroup;
 			children = (
 				269CF03E2528EFD70079BB8F /* SwiftUIMovieBaseApp.swift */,
-				269CF0402528EFD70079BB8F /* ContentView.swift */,
 				269CF0422528EFD70079BB8F /* Assets.xcassets */,
 				269CF0472528EFD70079BB8F /* Info.plist */,
 				26EB8B71252CF696007E3BCE /* Helpers */,
+				266D1B8D2530FF6B0080CFBE /* Models */,
 				26EB8B6C252CEFE7007E3BCE /* Network */,
 				26EB8B68252CEFAC007E3BCE /* Resources */,
+				265DD0D725377BE800D37E86 /* ViewModels */,
+				265DD0D825377C0500D37E86 /* Views */,
 				269CF0442528EFD70079BB8F /* Preview Content */,
 			);
 			path = SwiftUIMovieBase;
@@ -214,9 +234,11 @@
 				26EB8B6E252CEFF6007E3BCE /* BaseNetwork.swift in Sources */,
 				265DD0E025377E0700D37E86 /* TopRatedMovieResponse.swift in Sources */,
 				269CF0412528EFD70079BB8F /* ContentView.swift in Sources */,
+				265DD0DA25377C1700D37E86 /* TopRatedMoviesViewModel.swift in Sources */,
 				264F31A5252F8C5C00849B41 /* TopRatedMovieRequest.swift in Sources */,
 				264F319E252F8B2D00849B41 /* BaseResponse.swift in Sources */,
 				269CF03F2528EFD70079BB8F /* SwiftUIMovieBaseApp.swift in Sources */,
+				266D1B8F2530FF790080CFBE /* Movie.swift in Sources */,
 				26EB8B73252CF6A7007E3BCE /* PlistReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
