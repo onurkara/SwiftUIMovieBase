@@ -9,6 +9,15 @@ protocol BaseRequest {
     var method: HTTPMethod { get }
 
     var path: String { get set }
+
+    var parameters: Parameters { get }
+}
+
+extension BaseRequest {
+
+    var parameters: Parameters {
+        return [:]
+    }
 }
 
 protocol GetRequest: BaseRequest {
@@ -21,6 +30,6 @@ protocol GetRequest: BaseRequest {
 extension GetRequest {
 
     var method: HTTPMethod {
-        return .get
+        .get
     }
 }

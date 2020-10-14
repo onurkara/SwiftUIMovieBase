@@ -22,6 +22,10 @@ final class BaseNetwork {
                 Constants.HeaderInfo.apiKey: apiKey]
     }
 
+    private var apiKeyParameter: String {
+        "?api_key="
+    }
+
     private var apiKey: String {
         PlistReader.readValueOfKey(key: Constants.apiKey)
     }
@@ -30,8 +34,10 @@ final class BaseNetwork {
 
     func fetch<T: Decodable>(request: BaseRequest,
                              completion: @escaping ((T?, AFError?) -> Void)) {
-        let path = Constants.baseUrl + request.path
-        AF.request(path, method: request.method, headers: headers).responseDecodable { (response: DataResponse<T?, AFError>) in
+        let path = Constants.baseUrl + request.path + apiKeyParameter + apiKey
+        AF.request(path, method: request.method,
+                   parameters: request.parameters,
+                   headers: headers).responseDecodable { (response: DataResponse<T?, AFError>) in
             switch response.result {
             case let .success(data):
                 completion(data, nil)
