@@ -3,12 +3,22 @@
 //  SwiftUIMovieBase
 
 import Alamofire
+import Combine
 
-final class TopRatedMoviesViewModel {
+final class TopRatedMoviesViewModel: ObservableObject {
+
+    @Published var loading = true
+
+    init() {
+        fetchTopRatedMovies()
+    }
 
     func fetchTopRatedMovies() {
-        fetchTopRatedMovies { response, error in
-            
+        fetchTopRatedMovies { [weak self] response, error in
+            guard let self = self else {
+                return
+            }
+            self.loading = false
         }
     }
 
