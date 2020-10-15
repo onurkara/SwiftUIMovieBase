@@ -13,6 +13,7 @@
 		265DD0DA25377C1700D37E86 /* TopRatedMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DD0D925377C1700D37E86 /* TopRatedMoviesViewModel.swift */; };
 		265DD0E025377E0700D37E86 /* TopRatedMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265DD0DF25377E0700D37E86 /* TopRatedMovieResponse.swift */; };
 		266D1B8F2530FF790080CFBE /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D1B8E2530FF790080CFBE /* Movie.swift */; };
+		269C67CC2538CA73001F2FD9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 269C67CB2538CA73001F2FD9 /* Lottie */; };
 		269CF03F2528EFD70079BB8F /* SwiftUIMovieBaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CF03E2528EFD70079BB8F /* SwiftUIMovieBaseApp.swift */; };
 		269CF0412528EFD70079BB8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CF0402528EFD70079BB8F /* ContentView.swift */; };
 		269CF0432528EFD70079BB8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269CF0422528EFD70079BB8F /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				269CF0502528F1C50079BB8F /* Alamofire in Frameworks */,
+				269C67CC2538CA73001F2FD9 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +174,7 @@
 			name = SwiftUIMovieBase;
 			packageProductDependencies = (
 				269CF04F2528F1C50079BB8F /* Alamofire */,
+				269C67CB2538CA73001F2FD9 /* Lottie */,
 			);
 			productName = SwiftUIMovieBase;
 			productReference = 269CF03B2528EFD70079BB8F /* SwiftUIMovieBase.app */;
@@ -202,6 +205,7 @@
 			mainGroup = 269CF0322528EFD60079BB8F;
 			packageReferences = (
 				269CF04E2528F1C50079BB8F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				269C67CA2538CA73001F2FD9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 269CF03C2528EFD70079BB8F /* Products */;
 			projectDirPath = "";
@@ -428,6 +432,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		269C67CA2538CA73001F2FD9 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
 		269CF04E2528F1C50079BB8F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -439,6 +451,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		269C67CB2538CA73001F2FD9 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 269C67CA2538CA73001F2FD9 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		269CF04F2528F1C50079BB8F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 269CF04E2528F1C50079BB8F /* XCRemoteSwiftPackageReference "Alamofire" */;
