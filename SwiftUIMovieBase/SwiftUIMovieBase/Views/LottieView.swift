@@ -9,7 +9,7 @@ struct LottiView: UIViewRepresentable {
 
     typealias UIViewType = UIView
 
-    @State var animationNamed: String
+    @State var animationNamed: String = "loading_animation"
 
     func makeUIView(context: Context) -> UIView {
         let containerView = UIView()

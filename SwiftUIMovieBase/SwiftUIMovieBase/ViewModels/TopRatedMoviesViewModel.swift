@@ -8,6 +8,7 @@ import Combine
 final class TopRatedMoviesViewModel: ObservableObject {
 
     @Published var loading = true
+    @Published var topRatedMovies: [Movie] = []
 
     init() {
         fetchTopRatedMovies()
@@ -15,9 +16,11 @@ final class TopRatedMoviesViewModel: ObservableObject {
 
     func fetchTopRatedMovies() {
         fetchTopRatedMovies { [weak self] response, error in
-            guard let self = self else {
+            guard let self = self,
+                  let topRatedMovies = response?.results else {
                 return
             }
+            self.topRatedMovies = topRatedMovies
             self.loading = false
         }
     }

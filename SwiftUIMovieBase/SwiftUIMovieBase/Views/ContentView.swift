@@ -7,8 +7,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+
         return TabView {
-            Text("Top rated movies").tabItem {
+            TopRatedMovieView().tabItem {
                 Image(systemName: "list.star")
                 Text("Top Rated")
             }
