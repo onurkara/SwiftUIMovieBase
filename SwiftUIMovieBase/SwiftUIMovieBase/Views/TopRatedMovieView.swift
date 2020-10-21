@@ -7,7 +7,7 @@ import SwiftUI
 struct TopRatedMovieView: View {
 
     @ObservedObject var viewModel = TopRatedMoviesViewModel()
-    
+
     var body: some View {
         VStack {
             if viewModel.loading {
@@ -18,9 +18,18 @@ struct TopRatedMovieView: View {
                     VStack(alignment: .leading) {
                         Text(movie.title)
                         Text(movie.releaseDate)
+
+                        if movie == viewModel.topRatedMovies.last {
+                            LottiView().onAppear(perform: {
+                                viewModel.fetchTopRatedMovies()
+                            })
+                        }
                     }
                 }
             }
-        }
+
+        }.onAppear(perform: {
+            viewModel.fetchTopRatedMovies()
+        })
     }
 }

@@ -7,25 +7,25 @@ import Combine
 
 final class TopRatedMoviesViewModel: ObservableObject {
 
+    private var moviePage = 1
+
     @Published var loading = true
     @Published var topRatedMovies: [Movie] = []
 
-    init() {
-        fetchTopRatedMovies()
-    }
-
     func fetchTopRatedMovies() {
-        fetchTopRatedMovies { [weak self] response, error in
+        loading = true
+        self.fetchTopRatedMovies { [weak self] response, error in
             guard let self = self,
                   let topRatedMovies = response?.results else {
                 return
             }
             self.topRatedMovies = topRatedMovies
+            self.moviePage += 1
             self.loading = false
         }
     }
 
     private func fetchTopRatedMovies(completion: @escaping (TopRatedMovieResponse?, AFError?) -> Void ) {
-        BaseNetwork.shared.fetch(request: TopRatedMovieRequest(), completion: completion)
+        BaseNetwork.shared.fetch(request: TopRatedMovieRequest(page: moviePage), completion: completion)
     }
 }
