@@ -14,7 +14,7 @@ final class TopRatedMoviesViewModel: ObservableObject {
 
     func fetchTopRatedMovies() {
         loading = true
-        self.fetchTopRatedMovies { [weak self] response, error in
+        fetchTopRatedMovies { [weak self] response, error in
             guard let self = self,
                   let topRatedMovies = response?.results else {
                 return

@@ -10,24 +10,19 @@ struct TopRatedMovieView: View {
 
     var body: some View {
         VStack {
-            if viewModel.loading {
-                LottiView()
-            }
-            else {
-                List(viewModel.topRatedMovies) { movie in
-                    VStack(alignment: .leading) {
-                        Text(movie.title)
-                        Text(movie.releaseDate)
-
-                        if movie == viewModel.topRatedMovies.last {
-                            LottiView().onAppear(perform: {
+            List(viewModel.topRatedMovies) { movie in
+                VStack(alignment: .leading) {
+                    Text(movie.title)
+                    Text(movie.releaseDate)
+                    if movie == viewModel.topRatedMovies.last {
+                        VStack(alignment: .center) {
+                            ProgressView().onAppear(perform: {
                                 viewModel.fetchTopRatedMovies()
                             })
-                        }
+                        }.frame(maxWidth: .infinity)
                     }
                 }
             }
-
         }.onAppear(perform: {
             viewModel.fetchTopRatedMovies()
         })
