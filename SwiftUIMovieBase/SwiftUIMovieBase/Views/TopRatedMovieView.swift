@@ -12,7 +12,7 @@ struct TopRatedMovieView: View {
     var body: some View {
         NavigationView {
             List(viewModel.topRatedMovies) { movie in
-                NavigationLink(destination: TopRatedMovieDetailView()) {
+                NavigationLink(destination: TopRatedMovieDetailView(movie: movie)) {
                     VStack(alignment: .leading) {
                         Text(movie.title)
                         Text(movie.releaseDate)
