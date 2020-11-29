@@ -6,6 +6,7 @@ import SwiftUI
 
 struct TopRatedMovieView: View {
 
+    private var isAppeared: Bool = false
     @ObservedObject var viewModel = TopRatedMoviesViewModel()
     private let pageTitle = "Top Rated Movies"
 
@@ -26,7 +27,10 @@ struct TopRatedMovieView: View {
                     }.frame(maxWidth: .infinity)
                 }
             }.onAppear(perform: {
-                viewModel.fetchTopRatedMovies()
+                if !isAppeared {
+                    viewModel.fetchTopRatedMovies()
+                }
+                isAppeared = true
             })
             .navigationBarTitle(Text(pageTitle))
         }
