@@ -13,11 +13,6 @@ struct ContentView: View {
                 Image(systemName: "list.star")
                 Text("Top Rated")
             }
-
-            Text("Popular movies").tabItem {
-                Image(systemName: "list.and.film")
-                Text("Popular")
-            }
         }
     }
 }
